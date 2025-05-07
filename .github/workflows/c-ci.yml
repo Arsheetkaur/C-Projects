@@ -1,0 +1,24 @@
+name: C Program CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install GCC
+      run: sudo apt-get install -y gcc
+
+    - name: Compile Guessing Game
+      run: gcc guessing_game.c -o game
+
+    - name: Run Guessing Game
+      run: echo "42" | ./game || true
