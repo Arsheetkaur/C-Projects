@@ -20,5 +20,6 @@ jobs:
     - name: Compile Guessing Game
       run: gcc guessing_game.c -o game
 
-    - name: Run Guessing Game
-      run: echo "42" | ./game || true
+    # Comment out or remove the run step for now
+    # - name: Run Guessing Game
+    #   run: ./game
