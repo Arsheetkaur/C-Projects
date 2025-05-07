@@ -14,11 +14,5 @@ A simple number guessing game where the user tries to guess a randomly generated
 - Displays number of attempts
 - Simple terminal-based interface
 
-### How to Run:
-```bash
-gcc guessing_game.c -o game
-./game
-
-
 
 ![image](https://github.com/user-attachments/assets/09647e77-8198-4230-add2-5b8a9b6c8c62)
