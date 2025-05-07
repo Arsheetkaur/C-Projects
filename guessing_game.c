@@ -7,10 +7,11 @@ int main(){
   int no_of_guess = 0;
 
   // Initialize random number
-  srand(time(0));
-  random = rand() % 100 + 1;
+  srand(time(NULL));
 
   printf("Welcome to the World of Guessing Numbers.\n");
+  random = rand() * 100 + 1; // Generating between 0 to 1
+  printf("Number generated is: %d", random);
 
   do {
     printf("\nPlease enter your Guess between(1 to 100): ");
