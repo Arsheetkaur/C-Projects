@@ -1,8 +1,14 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
 int main(){
   int random, guess;
   int no_of_guess = 0;
+
+  // Initialize random number
+  srand(time(0));
+  random = rand() % 100 + 1;
 
   printf("Welcome to the World of Guessing Numbers.\n");
 
