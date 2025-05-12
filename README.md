@@ -59,3 +59,25 @@ This project is a terminal-based digital clock written in C. It displays the cur
 ![image](https://github.com/user-attachments/assets/180c3560-5768-4eb3-8981-1d093d7c51c4)
 
 
+# Project 4: Multi-Task Progress Bar Simulation
+
+This project is a simple C program that simulates multiple tasks progressing in real-time using terminal-based progress bars. It visually displays how each task advances over time with a random step increment.
+
+## Features
+
+- Simulates up to 10 tasks running simultaneously.
+- Each task progresses from 0% to 100% with a randomly assigned speed.
+- Terminal-based dynamic progress bars.
+- Automatically clears and updates the screen each second to animate progress.
+- Lightweight and runs in any standard terminal environment.
+
+## How it Works
+
+- Each task is represented using a struct with an ID, progress percentage, and a step size.
+- On each loop iteration, tasks advance by their step size until reaching 100%.
+- The screen is cleared and re-rendered every second using ANSI terminal control for smooth animation.
+
+![image](https://github.com/user-attachments/assets/17cbc971-c93b-4f4b-b000-dc1304fd7b69)
+
+
+
