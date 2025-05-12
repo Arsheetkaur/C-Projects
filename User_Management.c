@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include <termios.h>
+#include <conio.h>
 
 #define MAX_USERS 10
 #define CREDENTIAL_LENGTH 30
@@ -93,13 +93,6 @@ void input_credentials(char* username, char* password) {
   printf("Enter password (masking enabled): ");
   fflush(stdout);
 
-  // Change terminal Properties
-  struct termios old_props, new_props;
-  tcgetattr(STDIN_FILENO, &old_props);
-  new_props = old_props;
-  new_props.c_lflag = ~(ECHO | ICANON);
-  tcsetattr(STDIN_FILENO, TCSANOW, &new_props);
-
   char ch;
   int i = 0;
   while ((ch = getchar()) != '\n' && ch != EOF) {
@@ -115,7 +108,7 @@ void input_credentials(char* username, char* password) {
     }
   }
   password[i] = '\0';
-  tcsetattr(STDIN_FILENO, TCSANOW, &old_props);
+  printf("\n");
 }
 
 void fix_fgets_input(char* string) {
