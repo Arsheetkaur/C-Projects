@@ -80,4 +80,39 @@ This project is a simple C program that simulates multiple tasks progressing in 
 ![image](https://github.com/user-attachments/assets/17cbc971-c93b-4f4b-b000-dc1304fd7b69)
 
 
+## Project 4 - User Management System in C
+
+This project is a simple *User Management System written in C. It allows users to register and log in, with their credentials stored in memory. Password input is **masked* for privacy during entry.
+
+## Features
+
+- Register new users (up to 10)
+- Secure login with password masking
+- In-memory credential handling using structs
+- Console-based interface
+
+## Technologies Used
+
+- C Language
+- Console I/O with stdio.h and conio.h
+- Password masking using _getch() (Windows-compatible)
+
+## How It Works
+
+1. On running the program, you'll get options to:
+   - Register a new user
+   - Login with credentials
+   - Exit the application
+2. During password entry, characters are hidden behind *.
+3. Username and password are checked against stored users in memory.
+
+## Requirements
+
+- Windows OS (uses <conio.h>)
+- GCC or any standard C compiler
+
+![image](https://github.com/user-attachments/assets/b1426096-843b-4d16-8c7c-692fa7f77241)
+
+
+
 
